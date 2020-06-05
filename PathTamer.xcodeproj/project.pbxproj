@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,11 @@
 		486D605D2489D52F0042FEBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 486D605C2489D52F0042FEBF /* Assets.xcassets */; };
 		486D60602489D52F0042FEBF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 486D605F2489D52F0042FEBF /* Preview Assets.xcassets */; };
 		486D60632489D52F0042FEBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 486D60612489D52F0042FEBF /* Main.storyboard */; };
+		486D606C2489D5610042FEBF /* SVGPathParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486D606B2489D5610042FEBF /* SVGPathParser.swift */; };
+		486D606F2489D69D0042FEBF /* bez in Frameworks */ = {isa = PBXBuildFile; productRef = 486D606E2489D69D0042FEBF /* bez */; };
+		486D60712489E0300042FEBF /* normalize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486D60702489E0300042FEBF /* normalize.swift */; };
+		48CA3CCB248A6B3B00E5C775 /* CalculateBoundingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CA3CCA248A6B3B00E5C775 /* CalculateBoundingBox.swift */; };
+		48CA3CCE248A6D4000E5C775 /* Shapes in Frameworks */ = {isa = PBXBuildFile; productRef = 48CA3CCD248A6D4000E5C775 /* Shapes */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +28,9 @@
 		486D60622489D52F0042FEBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		486D60642489D52F0042FEBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		486D60652489D52F0042FEBF /* PathTamer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PathTamer.entitlements; sourceTree = "<group>"; };
+		486D606B2489D5610042FEBF /* SVGPathParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SVGPathParser.swift; path = "../../../Downloads/7174402b4078e90deaf222c726b1fa9d-f1db975e8853668089e2c4a90dbdbb74f33e832c/SVGPathParser.swift"; sourceTree = "<group>"; };
+		486D60702489E0300042FEBF /* normalize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = normalize.swift; sourceTree = "<group>"; };
+		48CA3CCA248A6B3B00E5C775 /* CalculateBoundingBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateBoundingBox.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +38,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48CA3CCE248A6D4000E5C775 /* Shapes in Frameworks */,
+				486D606F2489D69D0042FEBF /* bez in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,7 +66,10 @@
 			isa = PBXGroup;
 			children = (
 				486D60582489D52B0042FEBF /* AppDelegate.swift */,
+				486D606B2489D5610042FEBF /* SVGPathParser.swift */,
 				486D605A2489D52B0042FEBF /* ContentView.swift */,
+				486D60702489E0300042FEBF /* normalize.swift */,
+				48CA3CCA248A6B3B00E5C775 /* CalculateBoundingBox.swift */,
 				486D605C2489D52F0042FEBF /* Assets.xcassets */,
 				486D60612489D52F0042FEBF /* Main.storyboard */,
 				486D60642489D52F0042FEBF /* Info.plist */,
@@ -90,6 +103,10 @@
 			dependencies = (
 			);
 			name = PathTamer;
+			packageProductDependencies = (
+				486D606E2489D69D0042FEBF /* bez */,
+				48CA3CCD248A6D4000E5C775 /* Shapes */,
+			);
 			productName = PathTamer;
 			productReference = 486D60552489D52A0042FEBF /* PathTamer.app */;
 			productType = "com.apple.product-type.application";
@@ -118,6 +135,10 @@
 				Base,
 			);
 			mainGroup = 486D604C2489D52A0042FEBF;
+			packageReferences = (
+				486D606D2489D69D0042FEBF /* XCRemoteSwiftPackageReference "SwiftUI-bez" */,
+				48CA3CCC248A6D4000E5C775 /* XCRemoteSwiftPackageReference "SwiftUI-Shapes" */,
+			);
 			productRefGroup = 486D60562489D52A0042FEBF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -147,6 +168,9 @@
 			files = (
 				486D605B2489D52B0042FEBF /* ContentView.swift in Sources */,
 				486D60592489D52B0042FEBF /* AppDelegate.swift in Sources */,
+				486D606C2489D5610042FEBF /* SVGPathParser.swift in Sources */,
+				48CA3CCB248A6B3B00E5C775 /* CalculateBoundingBox.swift in Sources */,
+				486D60712489E0300042FEBF /* normalize.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +369,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		486D606D2489D69D0042FEBF /* XCRemoteSwiftPackageReference "SwiftUI-bez" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kieranb662/SwiftUI-bez.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.6;
+			};
+		};
+		48CA3CCC248A6D4000E5C775 /* XCRemoteSwiftPackageReference "SwiftUI-Shapes" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kieranb662/SwiftUI-Shapes.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		486D606E2489D69D0042FEBF /* bez */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 486D606D2489D69D0042FEBF /* XCRemoteSwiftPackageReference "SwiftUI-bez" */;
+			productName = bez;
+		};
+		48CA3CCD248A6D4000E5C775 /* Shapes */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 48CA3CCC248A6D4000E5C775 /* XCRemoteSwiftPackageReference "SwiftUI-Shapes" */;
+			productName = Shapes;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 486D604D2489D52A0042FEBF /* Project object */;
 }
